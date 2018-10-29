@@ -7,7 +7,7 @@ Vue Learning - Basic
 
 [生命周期图示](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
 
-- template compilation is performed ahead-of-time if using a build step, e.g. single-file componentskv
+- template compilation is performed ahead-of-time if using a build step, e.g. single-file components
 
 [模板语法](https://cn.vuejs.org/v2/guide/syntax.html)
 
