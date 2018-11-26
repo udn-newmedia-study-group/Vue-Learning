@@ -30,7 +30,11 @@
       <li> prop 以一种原始的值传入且需要进行转换</li>
     </ol>
     <h3>非 Prop 的特性</h3>
-    <textarea v-model="msg" name="" id="" cols="50" rows="10"></textarea>
+    <button > 編輯 </button>
+    <div class="edit">
+      <textarea v-model="msg" name="" id="" cols="50" rows="10"></textarea>
+    </div>
+    <div class="title">及時編輯板</div>
     <vue-markdown :emoji="false" :source="msg">{{ msg }}</vue-markdown>
     
     <h5>替换/合并已有的特性</h5>
@@ -44,11 +48,13 @@
 
     <h1>自定義事件</h1>
     <h3>事件名</h3>
+    <myComponent v-on:my-event="doSomething"></myComponent>
 
     <h3>自定義組件的 v-model</h3>
-    <BaseCheckbox></BaseCheckbox>
+    <BaseCheckbox v-model="lovingVue"></BaseCheckbox>
 
     <h3>将原生事件绑定到组件</h3>
+    <BaseInput v-on:focus.native="onFocus"></BaseInput>
 
     <h3>.sync 修饰符</h3>
 
@@ -130,13 +136,15 @@ import Datepicker from '@/assets/JS/UI/Datepicker'
 import BlogPost from '@/assets/JS/UI/BlogPost'
 import PracticeInjection from '@/assets/JS/UI/PracticeInjection'
 import VueMarkdown from 'vue-markdown'
-import HelloOne from '@/components/UI/HelloOne.vue' 
+import HelloOne from '@/components/UI/HelloOne.vue'
+import myComponent from '@/assets/JS/UI/myComponent' 
 
 var ComponentPartial = {
     data: function () {
         return {
         slogan: '我是局部註冊組件',
-        count: 1
+        count: 1,
+        lovingVue: false
         }
     },
     template: '<button v-on:click="count++">{{ slogan }}, 我擁有的票數： {{ count }} 票</button>'
@@ -153,6 +161,7 @@ export default {
   components: {
     HelloWorld,
     AppButton,
+    myComponent,
     ComponentPartial,
     BlogPost,
     BaseInput,
@@ -191,6 +200,11 @@ export default {
           isComplete: true
         }
       ]
+    }
+  },
+  methods: {
+    doSomething () {
+       alert("OK")
     }
   }
 }
