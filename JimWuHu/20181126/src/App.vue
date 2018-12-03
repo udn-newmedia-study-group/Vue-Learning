@@ -11,11 +11,11 @@
     <AppButton></AppButton>
     <br>
     <h3>模塊註冊</h3>
-    <!-- <HelloOne msg="hello1"></HelloOne>
+    <HelloOne msg="hello1"></HelloOne>
     <HelloTwo msg="hello2"></HelloTwo>
     <HelloThree msg="hello3"></HelloThree>
     <HelloFour msg="hello4"></HelloFour>
-    <HelloFive msg="hello5"></HelloFive> -->
+    <HelloFive msg="hello5"></HelloFive>
     
     <!-- Prop -->
     <h1>Prop</h1>
@@ -123,6 +123,7 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import AppButton from '@/assets/JS/UI/AppButton'
 import BaseInput from '@/assets/JS/UI/BaseInput'
@@ -137,7 +138,10 @@ import BlogPost from '@/assets/JS/UI/BlogPost'
 import PracticeInjection from '@/assets/JS/UI/PracticeInjection'
 import VueMarkdown from 'vue-markdown'
 import HelloOne from '@/components/UI/HelloOne.vue'
-import myComponent from '@/assets/JS/UI/myComponent' 
+import myComponent from '@/assets/JS/UI/myComponent'
+import CollectComponents from '../plugins/CollectComponents.js'
+
+Vue.use(CollectComponents)
 
 var ComponentPartial = {
     data: function () {
