@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d22d579"],{f6a4:function(n,t,e){"use strict";e.r(t),t["default"]=function(n,t){setTimeout(function(){n({template:"<div>I am async!</div>"})},1e3)}}}]);
+//# sourceMappingURL=chunk-2d22d579.dc1e0f34.js.map
